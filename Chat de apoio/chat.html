@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversa - Chat de Apoio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chat de Apoio</h1>
+        <p>Converse e receba respostas acolhedoras</p>
+        <a href="index.html" class="voltar">⬅ Voltar</a>
+    </header>
+
+    <main class="chat-container">
+        <!-- Scroll será apenas dentro desta div -->
+        <div id="chat" class="chat-box"></div>
+
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>💬 Criado para fins educacionais</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

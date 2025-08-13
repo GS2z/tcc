@@ -1,0 +1,207 @@
+/* -------------------- Página Inicial -------------------- */
+.inicio-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inicio-body header {
+    width: 100%;
+    background-color: #8e44ad;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.inicio-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.avatar-grande {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #8e44ad;
+    object-fit: cover;
+}
+
+.intro-texto {
+    font-size: 1.2em;
+    max-width: 500px;
+    color: #333;
+}
+
+.botao-iniciar {
+    background-color: #8e44ad;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.botao-iniciar:hover {
+    background-color: #732d91;
+}
+
+/* -------------------- Chat -------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6f5f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: #8e44ad;
+    color: white;
+    padding: 15px 0;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background: #732d91;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+.voltar:hover {
+    background: #5b2070;
+}
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+/* Caixa do chat com scroll interno */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    overflow-y: auto;  /* Scroll interno */
+    max-height: 70vh;  /* Limita a altura */
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Mensagens */
+.message {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    animation: fadeIn 0.3s ease;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #8e44ad;
+    color: white;
+    border-bottom-right-radius: 0;
+    justify-content: flex-end;
+}
+
+.bot {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+    border-bottom-left-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Input + botão */
+.input-container {
+    display: flex;
+    border-top: 1px solid #ccc;
+    background-color: #ffffffee;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #732d91;
+}
+
+/* Scroll interno */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+/* Animação fade-in */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .chat-box {
+        max-height: 50vh;
+    }
+    input, button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
